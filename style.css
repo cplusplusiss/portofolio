@@ -1,0 +1,180 @@
+
+/* Global */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Times New Roman', Times, serif;
+}
+
+/* Hero Section */
+
+.hero {
+    width: 100%;
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+
+    background-image: url('menu.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.logo {
+    position: absolute;
+    top: 24px;
+    left: 32px;
+
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+}
+
+.hero-content {
+    width: 50%;
+    padding-left: 80px;
+}
+
+.subtitle {
+    color: #ca8a04;
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.hero-content h1 {
+    color: white;
+    font-size: clamp(42px, 5vw, 72px);
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.description {
+    color: white;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.hero-empty {
+    width: 50%;
+    min-height: 100vh;
+}
+
+/* About Section */
+
+.about {
+    min-height: 280px;
+
+    background-color: #14532d;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    padding: 50px 40px;
+}
+
+.about h2,
+.skills h2 {
+    color: #ca8a04;
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.about p {
+    color: white;
+    max-width: 768px;
+    text-align: center;
+    line-height: 1.7;
+    font-size: 17px;
+}
+
+/* Skills Section */
+
+.skills {
+    min-height: 280px;
+
+    background-color: #15803d;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    padding: 50px 40px;
+}
+
+.skills-container {
+    width: 100%;
+    max-width: 1024px;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px;
+}
+
+.skill-item h3 {
+    color: #eab308;
+    font-size: 20px;
+    margin-bottom: 12px;
+}
+
+.skill-item p {
+    color: white;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+/* Responsive Design */
+
+@media (max-width: 768px) {
+
+    .hero {
+        flex-direction: column;
+        justify-content: center;
+        padding: 100px 25px 50px;
+    }
+
+    .logo {
+        left: 25px;
+        top: 25px;
+    }
+
+    .hero-content {
+        width: 100%;
+        padding: 0;
+    }
+
+    .hero-content h1 {
+        font-size: 46px;
+    }
+
+    .subtitle {
+        font-size: 22px;
+    }
+
+    .hero-empty {
+        display: none;
+    }
+
+    .about,
+    .skills {
+        padding: 50px 25px;
+    }
+
+    .skills-container {
+        grid-template-columns: 1fr;
+        gap: 28px;
+    }
+}
